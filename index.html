@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en">
     <head>
-        <title>Silviu's Tasty Recipes</title>
         <meta content="text/html; charset=utf-8" />
+        <title>Silviu's Tasty Recipes</title>
+        <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"/>
         <link href="index.css" rel="stylesheet" type="text/css"/>
     </head>
 <body>
     <div id="container"
-    <header>
+     <header>
         <h1>How to make Red Chimichuri</h1>
         <img src="https://i.imgur.com/dqC6Vmr.jpg" alt="red chimichuri">
     <p>This red chimichuri can be used as a base for a a steak antipasto, together with caramelized onions, horseradish sauce and garlic bread</p>
 </header>
-<section>
-    <h2>Ingredients</h2>
+<section id="ingredients" onmouseover="ingredientsHover()" onmouseout="ingredientsNormal()">
+    <h2>Ingredients <i class="fa-solid fa-cauldron"></i></h2>
     <ul>
         <li>Grilled red peppers</li>
         <li>Garlic</li>
@@ -26,15 +27,16 @@
         <li>Pepper</li>
         <li>Extra virgin olive oil</li>
     </ul>
-    <section>
-        <h2>Utensils</h2>
+    <section id="utensils" onmouseover="utensilsHover()" onmouseout="utensilsNormal()">
+        <h2>Utensils <i class="fa-solid fa-fork-knife"></i></h2>
     <ul>
         <li>Mixer</li>
         <li>Colander</li>
         <li>Small bowl for serving</li>
     </ul>
     </section>
-    <h2>Preparation</h2>
+    <section id="preparation" onmouseover="preparationHover()" onmouseout="preparationNormal()">
+    <h2>Preparation <i class="fa-solid fa-clipboard-list"></i></h2>
     <ol>
         <li>Blend everything on high speed for 5 seconds</li>
         <li>Put the mixture in a colander, and leave it to strain for about 5 minutes</li>
@@ -46,6 +48,19 @@
         <p>Copyright Silviu Asandei 2022</p>
     </footer>
 </div>
-<script src="script.js"></script>
+<script>
+function ingredientsHover(){
+    document.getElementById('ingredients').firstElementChild.firstElementChild.style.fontSize = "300%"}
+function ingredientsNormal(){
+    document.getElementById('ingredients').firstElementChild.firstElementChild.style.fontSize = "100%"}
+function utensilssHover(){
+    document.getElementById('utensils').firstElementChild.firstElementChild.style.fontSize = "300%"}
+function utensilsNormal(){
+    document.getElementById('utensils').firstElementChild.firstElementChild.style.fontSize = "100%"}
+function preparationHover(){
+    document.getElementById('preparation').firstElementChild.firstElementChild.style.fontSize = "300%"}
+function preparationNormal(){
+    document.getElementById('preparation').firstElementChild.firstElementChild.style.fontSize = "100%"}
+</script>
 </body>
 </html>
